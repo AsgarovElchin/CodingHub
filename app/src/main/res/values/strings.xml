@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">CodingHub</string>
+    <string name="login">Login</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="login_with_facebook">Login with Facebook</string>
+    <string name="or">OR</string>
+    <string name="your_email_address">Your email address</string>
+    <string name="your_password">Your password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="by_continuing">By continuing, you agree with our</string>
+    <string name="terms_and_conditions"><u>Terms &amp; Conditions</u></string>
+    <string name="reset_password">Reset Password</string>
+    <string name="we_will_send">Enter your email and we will send you a link to reset your password.</string>
+    <string name="new_password">New Password</string>
+    <string name="must_be_different">Your new password must be different from previous used passwords.</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_with_email">Sign Up with Email</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
+    <string name="sign_up_with_facebook">Sign Up with Facebook</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="what_is_your_email">What is your email?</string>
+    <string name="what_is_your_password">What is your password?</string>
+    <string name="create_a_username">Create a username</string>
+    <string name="your_username">Your username</string>
+    <string name="login_or_sign_up">Login or Sign Up</string>
+    <string name="to_take_quiz">Login or create an account to take quiz</string>
+    <string name="create_an_account">Create an account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

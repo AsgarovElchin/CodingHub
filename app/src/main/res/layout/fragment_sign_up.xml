@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".SignUpFragment">
+
+    <TextView
+        android:id="@+id/sign_up_tv"
+        style="@style/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/sign_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_up_with_email"
+        style="@style/login_with_smth"
+        android:layout_width="0dp"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:iconPadding="10dp"
+        app:icon="@drawable/email_icon"
+        app:iconGravity="textStart"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:paddingVertical="12dp"
+        android:text="@string/sign_up_with_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_tv" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_up_with_google"
+        style="@style/login_with_smth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:drawableLeft="@drawable/google_icon"
+        android:paddingVertical="12dp"
+        android:text="@string/sign_up_with_google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_with_email" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_up_with_facebook"
+        style="@style/login_with_smth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:drawableLeft="@drawable/facebook_icon"
+        android:paddingVertical="12dp"
+        android:text="@string/sign_up_with_facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_with_google" />
+
+    <TextView
+        android:id="@+id/already_have_an_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/already_have_an_account"
+        app:layout_constraintBottom_toBottomOf="@id/login_tv"
+        app:layout_constraintEnd_toStartOf="@id/login_tv"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_with_facebook" />
+
+    <TextView
+        android:id="@+id/login_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/login"
+        android:textColor="@color/purple_800"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/already_have_an_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/already_have_an_account"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_with_facebook" />
+
+    <TextView
+        android:id="@+id/by_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="50dp"
+        style="@style/by_continuing"
+        android:text="@string/by_continuing"
+        app:layout_constraintBottom_toBottomOf="@id/tms_and_cdts"
+        app:layout_constraintEnd_toStartOf="@id/tms_and_cdts"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/already_have_an_account" />
+
+    <TextView
+        style="@style/terms_and_conditions"
+        android:id="@+id/tms_and_cdts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terms_and_conditions"
+        app:layout_constraintBottom_toBottomOf="@id/by_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/by_tv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
