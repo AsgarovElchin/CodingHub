@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="270dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/illustration1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
 
             <Button
                 android:id="@+id/btn_welcome_login"
-                style="@style/confirmation_button"
+                style="@style/conf_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -66,8 +66,8 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/btn_welcome_create_accounut"
-                style="@style/confirmation_button"
+                android:id="@+id/btn_welcome_create_account"
+                style="@style/conf_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

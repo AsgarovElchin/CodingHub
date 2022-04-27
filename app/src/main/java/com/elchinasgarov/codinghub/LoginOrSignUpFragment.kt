@@ -5,8 +5,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.elchinasgarov.codinghub.databinding.FragmentLoginOrSignUpBinding
 
 
 class LoginOrSignUpFragment : Fragment(R.layout.fragment_login_or_sign_up) {
+    private lateinit var binding : FragmentLoginOrSignUpBinding
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentLoginOrSignUpBinding.inflate(inflater,container,false)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnWelcomeLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_loginOrSignUpFragment_to_loginFragment)
+        }
+        binding.btnWelcomeCreateAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_loginOrSignUpFragment_to_signUpFragment)
+        }
+    }
 }
