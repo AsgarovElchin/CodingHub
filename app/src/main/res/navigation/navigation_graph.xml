@@ -47,5 +47,22 @@
         <action
             android:id="@+id/action_signUpFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_enterEmailFragment"
+            app:destination="@id/enterEmailFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/enterEmailFragment"
+        android:name="com.elchinasgarov.codinghub.EnterEmailFragment"
+        android:label="fragment_enter_email"
+        tools:layout="@layout/fragment_enter_email" >
+        <action
+            android:id="@+id/action_enterEmailFragment_to_bottomNavigationFragment"
+            app:destination="@id/bottomNavigationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomNavigationFragment"
+        android:name="com.elchinasgarov.codinghub.BottomNavigationFragment"
+        android:label="fragment_bottom_navigation"
+        tools:layout="@layout/fragment_bottom_navigation" />
 </navigation>
