@@ -6,11 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.elchinasgarov.codinghub.adapter.ViewPagerAdapter
 import com.elchinasgarov.codinghub.databinding.FragmentLoginOrSignUpBinding
+import com.elchinasgarov.codinghub.models.Data
 
 
 class LoginOrSignUpFragment : Fragment(R.layout.fragment_login_or_sign_up) {
     private lateinit var binding : FragmentLoginOrSignUpBinding
+    private var adapter = ViewPagerAdapter(getData())
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -19,6 +22,11 @@ class LoginOrSignUpFragment : Fragment(R.layout.fragment_login_or_sign_up) {
         binding = FragmentLoginOrSignUpBinding.inflate(inflater,container,false)
         return binding.root
     }
+    private fun getData()= arrayListOf(
+        Data(R.drawable.illustration1),
+        Data(R.drawable.illustration2),
+        Data(R.drawable.illustration3)
+    )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -28,5 +36,8 @@ class LoginOrSignUpFragment : Fragment(R.layout.fragment_login_or_sign_up) {
         binding.btnWelcomeCreateAccount.setOnClickListener {
             findNavController().navigate(R.id.action_loginOrSignUpFragment_to_signUpFragment)
         }
+        binding.viewPager.adapter = adapter
+        binding.indicator.setViewPager(binding.viewPager)
     }
+
 }
