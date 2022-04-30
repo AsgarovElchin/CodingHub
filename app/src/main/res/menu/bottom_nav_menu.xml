@@ -12,7 +12,7 @@
     <item
         android:id="@+id/leaderboard"
         android:icon="@drawable/leaderboard_icon"
-        android:title="leaderboard" />
+        android:title="Leaderboard" />
     <item
         android:id="@+id/settings"
         android:icon="@drawable/settings_icon"

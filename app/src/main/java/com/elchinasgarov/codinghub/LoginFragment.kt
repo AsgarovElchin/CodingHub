@@ -25,5 +25,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         binding.forgotPasswordTv.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_resetPasswordFragment)
         }
+        binding.loginBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_bottomNavigationFragment)
+        }
     }
 }

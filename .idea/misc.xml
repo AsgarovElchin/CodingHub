@@ -24,7 +24,7 @@
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/layout/fragment_enter_username.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/layout/fragment_enterr_email.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/layout/fragment_login.xml" value="0.264" />
-        <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/layout/fragment_login_or_sign_up.xml" value="0.2" />
+        <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/layout/fragment_login_or_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/layout/fragment_new_password.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/layout/fragment_reset_password.xml" value="0.264" />
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
@@ -32,9 +32,6 @@
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/mipmap-anydpi-v26/profile_icon.xml" value="0.149" />
       </map>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/elchinasgarov/codinghub/EnterPasswordFragment.kt" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

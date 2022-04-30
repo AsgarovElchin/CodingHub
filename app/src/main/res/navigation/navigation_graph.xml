@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_loginFragment_to_resetPasswordFragment"
             app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_bottomNavigationFragment"
+            app:destination="@id/bottomNavigationFragment" />
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
@@ -56,10 +59,25 @@
         android:name="com.elchinasgarov.codinghub.EnterEmailFragment"
         android:label="fragment_enter_email"
         tools:layout="@layout/fragment_enter_email" >
+
         <action
-            android:id="@+id/action_enterEmailFragment_to_bottomNavigationFragment"
-            app:destination="@id/bottomNavigationFragment" />
+            android:id="@+id/action_enterEmailFragment_to_enterPasswordFragment"
+            app:destination="@id/enterPasswordFragment" />
     </fragment>
+    <fragment
+        tools:layout="@layout/fragment_enter_password"
+        android:id="@+id/enterPasswordFragment"
+        android:name="com.elchinasgarov.codinghub.EnterPasswordFragment"
+        android:label="EnterPasswordFragment" >
+        <action
+            android:id="@+id/action_enterPasswordFragment_to_enterUsernameFragment"
+            app:destination="@id/enterUsernameFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_enter_username"
+        android:id="@+id/enterUsernameFragment"
+        android:name="com.elchinasgarov.codinghub.EnterUsernameFragment"
+        android:label="EnterUsernameFragment" />
     <fragment
         android:id="@+id/bottomNavigationFragment"
         android:name="com.elchinasgarov.codinghub.BottomNavigationFragment"

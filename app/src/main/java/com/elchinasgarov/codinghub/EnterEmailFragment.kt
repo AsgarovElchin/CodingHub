@@ -23,7 +23,7 @@ class EnterEmailFragment : Fragment(R.layout.fragment_enter_email) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.resetPassword1Tv.setOnClickListener {
-            findNavController().navigate(R.id.action_enterEmailFragment_to_bottomNavigationFragment)
+            findNavController().navigate(R.id.action_enterEmailFragment_to_enterPasswordFragment)
         }
     }
 }

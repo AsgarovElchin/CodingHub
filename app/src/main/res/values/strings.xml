@@ -24,9 +24,9 @@
     <string name="create_a_username">Create a username</string>
     <string name="your_username">Your username</string>
     <string name="login_or_sign_up">Login or Sign Up</string>
-    <string name="to_take_quiz">Login or create an account to take quiz</string>
+    <string name="to_take_quiz">Login or create an account to take quiz.</string>
     <string name="create_an_account">Create an account</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm">Confirm</string>
+
 
 </resources>
