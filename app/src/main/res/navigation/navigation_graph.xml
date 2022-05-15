@@ -26,7 +26,10 @@
             app:destination="@id/resetPasswordFragment" />
         <action
             android:id="@+id/action_loginFragment_to_bottomNavigationFragment"
-            app:destination="@id/bottomNavigationFragment" />
+            app:destination="@id/bottomNavigationFragment2" />
+        <action
+            android:id="@+id/action_loginFragment_to_bottomNavigationFragment2"
+            app:destination="@id/bottomNavigationFragment2" />
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
@@ -79,7 +82,7 @@
         android:name="com.elchinasgarov.codinghub.EnterUsernameFragment"
         android:label="EnterUsernameFragment" />
     <fragment
-        android:id="@+id/bottomNavigationFragment"
+        android:id="@+id/bottomNavigationFragment2"
         android:name="com.elchinasgarov.codinghub.BottomNavigationFragment"
         android:label="fragment_bottom_navigation"
         tools:layout="@layout/fragment_bottom_navigation" />
