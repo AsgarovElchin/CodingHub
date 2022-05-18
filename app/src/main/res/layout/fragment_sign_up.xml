@@ -20,61 +20,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_up_with_email"
-        style="@style/login_with_smth"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_layout"
+        style="@style/information_editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
-        android:paddingVertical="12dp"
-        android:text="@string/sign_up_with_email"
-        android:textAllCaps="false"
-        app:icon="@drawable/email_icon"
-        app:iconGravity="textStart"
-        app:iconPadding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_tv" />
+        app:layout_constraintTop_toBottomOf="@id/sign_up_tv">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_up_with_google"
-        style="@style/login_with_smth"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/person_icon"
+            android:drawablePadding="10dp"
+            android:hint="@string/your_username" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_layout"
+        style="@style/information_editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
-        android:paddingVertical="12dp"
-        android:text="@string/sign_up_with_google"
-        android:textAllCaps="false"
-        app:icon="@drawable/google_icon"
-        app:iconGravity="textStart"
-        app:iconPadding="10dp"
-        app:iconTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_with_email" />
+        app:layout_constraintTop_toBottomOf="@id/username_layout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/primary_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/lock_icon"
+            android:drawablePadding="10dp"
+            android:hint="@string/your_password" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_up_with_facebook"
-        style="@style/login_with_smth"
+        android:id="@+id/sign_up_button"
+        style="@style/conf_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:paddingVertical="12dp"
-        app:iconPadding="10dp"
-        android:text="@string/sign_up_with_facebook"
+        android:text="@string/confirm"
         android:textAllCaps="false"
-        app:icon="@drawable/facebook_icon"
-        app:iconGravity="textStart"
-        app:iconTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_with_google" />
+        app:layout_constraintTop_toBottomOf="@id/password_layout" />
 
     <TextView
         android:id="@+id/already_have_an_account"
@@ -87,7 +90,7 @@
         app:layout_constraintEnd_toStartOf="@id/login_tv"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_with_facebook" />
+        app:layout_constraintTop_toBottomOf="@id/sign_up_button" />
 
     <TextView
         android:id="@+id/login_tv"
@@ -101,7 +104,7 @@
         app:layout_constraintBottom_toBottomOf="@id/already_have_an_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/already_have_an_account"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_with_facebook" />
+        app:layout_constraintTop_toBottomOf="@id/sign_up_button" />
 
     <TextView
         android:id="@+id/by_tv"

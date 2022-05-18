@@ -25,8 +25,8 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         binding.loginTv.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
         }
-        binding.signUpWithEmail.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpFragment_to_enterEmailFragment)
-        }
+
+
+
     }
 }
