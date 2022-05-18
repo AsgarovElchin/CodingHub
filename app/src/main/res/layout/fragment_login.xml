@@ -85,6 +85,7 @@
         app:layout_constraintTop_toBottomOf="@id/or">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/email_icon"
@@ -110,6 +111,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/loginPassword"
             android:drawableStart="@drawable/lock_icon"
             android:drawablePadding="10dp"
             android:hint="@string/your_password" />
