@@ -15,11 +15,7 @@
         android:name="com.elchinasgarov.codinghub.LeaderboardFragment"
         android:label="fragment_leaderboard"
         tools:layout="@layout/fragment_leaderboard" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.elchinasgarov.codinghub.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.elchinasgarov.codinghub.SettingsFragment"

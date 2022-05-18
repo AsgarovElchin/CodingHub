@@ -17,6 +17,9 @@ import kotlinx.coroutines.launch
 class LoginFragment : Fragment(R.layout.fragment_login) {
     lateinit var auth: FirebaseAuth
     private lateinit var binding: FragmentLoginBinding
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -24,17 +27,21 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     ): View? {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
+
         binding.forgotPasswordTv.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_resetPasswordFragment)
         }
         binding.loginBtn.setOnClickListener {
             logInUser()
         }
+
+
     }
 
     private fun logInUser() {
@@ -47,6 +54,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             CoroutineScope(Dispatchers.IO).launch {
                 auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
                     findNavController().navigate(R.id.action_loginFragment_to_bottomNavigationFragment2)
+
 
                 }.addOnFailureListener {
                     Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_SHORT).show()

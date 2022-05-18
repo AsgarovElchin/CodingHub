@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.elchinasgarov.codinghub.adapter.ViewPagerAdapter
 import com.elchinasgarov.codinghub.databinding.FragmentLoginOrSignUpBinding
 import com.elchinasgarov.codinghub.models.Data
+import com.google.firebase.auth.FirebaseAuth
 
 
 class LoginOrSignUpFragment : Fragment(R.layout.fragment_login_or_sign_up) {
@@ -30,6 +31,7 @@ class LoginOrSignUpFragment : Fragment(R.layout.fragment_login_or_sign_up) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.btnWelcomeLogin.setOnClickListener {
             findNavController().navigate(R.id.action_loginOrSignUpFragment_to_loginFragment)
         }
