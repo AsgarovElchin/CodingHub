@@ -18,8 +18,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     lateinit var auth: FirebaseAuth
     private lateinit var binding: FragmentLoginBinding
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

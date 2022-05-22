@@ -65,5 +65,11 @@
         android:id="@+id/bottomNavigationFragment2"
         android:name="com.elchinasgarov.codinghub.BottomNavigationFragment"
         android:label="fragment_bottom_navigation"
-        tools:layout="@layout/fragment_bottom_navigation" />
+        tools:layout="@layout/fragment_bottom_navigation" >
+        <action
+            android:id="@+id/action_bottomNavigationFragment2_to_loginOrSignUpFragment"
+            app:destination="@id/loginOrSignUpFragment"
+            app:popUpTo="@id/loginOrSignUpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

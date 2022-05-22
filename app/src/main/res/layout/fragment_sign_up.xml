@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/person_icon"
             android:drawablePadding="10dp"
-            android:hint="@string/your_username" />
+            android:hint="@string/your_email_address" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

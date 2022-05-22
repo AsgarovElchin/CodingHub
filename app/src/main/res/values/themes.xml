@@ -72,5 +72,25 @@
         <item name="postSplashScreenTheme">@style/Theme.CodingHub</item>
     </style>
 
+    <style name="settings">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="hello">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="person_name">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="settings_tv">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/purple_800</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
 
 </resources>

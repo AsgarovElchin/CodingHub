@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.elchinasgarov.codinghub.databinding.FragmentBottomNavigationBinding
 
@@ -26,6 +27,11 @@ class BottomNavigationFragment : Fragment(R.layout.fragment_bottom_navigation) {
         val navHost = childFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
         binding.bnv.setupWithNavController(navHost.navController)
         binding.bnv.setOnItemReselectedListener(null)
+    }
+
+
+    fun logOut(){
+        findNavController().navigate(R.id.action_bottomNavigationFragment2_to_loginOrSignUpFragment)
     }
 
 
