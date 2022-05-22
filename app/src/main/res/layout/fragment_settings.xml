@@ -68,17 +68,17 @@
     <LinearLayout
         android:id="@+id/linear4"
         android:layout_width="wrap_content"
-        android:layout_marginEnd="40dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
         app:layout_constraintBottom_toBottomOf="@id/linear1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/edit_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/edit_icon" />
-
     </LinearLayout>
 
 
