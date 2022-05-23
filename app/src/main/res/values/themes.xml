@@ -38,6 +38,12 @@
         <item name="boxCornerRadiusTopStart">30dp</item>
     </style>
 
+    <style name="edit_profile_edit_text" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
     <style name="or">
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/black</item>

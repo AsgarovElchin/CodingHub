@@ -23,9 +23,9 @@ class LoginOrSignUpFragment : Fragment(R.layout.fragment_login_or_sign_up) {
         return binding.root
     }
     private fun getData()= arrayListOf(
-        Data(R.drawable.illustration1),
+        Data(R.drawable.illustration3),
         Data(R.drawable.illustration2),
-        Data(R.drawable.illustration3)
+        Data(R.drawable.illustration1)
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
