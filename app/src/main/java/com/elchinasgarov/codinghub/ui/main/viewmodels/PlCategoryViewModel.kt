@@ -15,7 +15,7 @@ class PlCategoryViewModel : ViewModel() {
 
 
     fun getPlDataFromFirebase() {
-        firestore.collection(NAME).get().addOnSuccessListener {
+        firestore.collection(CATEGORY_COLLECTION_NAME).get().addOnSuccessListener {
             val documents = it.documents
             val plList = documents.mapNotNull { doc ->
                 val plModell = doc.toObject(ProgrammingLanguagesModel::class.java)
@@ -31,7 +31,7 @@ class PlCategoryViewModel : ViewModel() {
     }
 
     companion object {
-        const val NAME = "PlCategory"
+        const val CATEGORY_COLLECTION_NAME = "PlCategory"
     }
 
 }

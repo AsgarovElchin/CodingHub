@@ -31,7 +31,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         binding.bnv.setupWithNavController(navHost.navController)
         binding.bnv.setOnItemReselectedListener(null)
         val conf = AppBarConfiguration.Builder(
-            R.id.homeFragment,
+            R.id.categoryFragment,
             R.id.leaderboardFragment,
             R.id.settingsFragment
         ).build()
@@ -40,9 +40,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
 
-    fun logOut(){
-        findNavController().navigate(R.id.action_bottomNavigationFragment2_to_loginOrSignUpFragment)
-    }
 
 
 

@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val graph = inflater.inflate(R.navigation.navigation_graph)
 
         if (auth.currentUser != null) {
-            graph.setStartDestination(R.id.bottomNavigationFragment2)
+            graph.setStartDestination(R.id.mainFragment)
         } else {
             graph.setStartDestination(R.id.loginOrSignUpFragment)
         }

@@ -4,12 +4,19 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import com.elchinasgarov.TopicModel
 import com.elchinasgarov.codinghub.databinding.PlItemListBinding
 import com.elchinasgarov.codinghub.ui.main.models.ProgrammingLanguagesModel
 import com.elchinasgarov.codinghub.ui.main.viewholders.PlCategoryViewHolder
 
 class PlCategoryAdapter() :
     ListAdapter<ProgrammingLanguagesModel, PlCategoryViewHolder>(MainDiffUtils) {
+    private var onItemClick: ((plModel :ProgrammingLanguagesModel) -> Unit)? = null
+
+    fun setOnItemClick(onItemClick: ((plModel :ProgrammingLanguagesModel) -> Unit)?){
+        this.onItemClick = onItemClick
+
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlCategoryViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -19,7 +26,7 @@ class PlCategoryAdapter() :
     }
 
     override fun onBindViewHolder(holder: PlCategoryViewHolder, position: Int) {
-        holder.bind(currentList[position])
+        holder.bind(currentList[position],onItemClick)
 
     }
 

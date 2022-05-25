@@ -8,6 +8,7 @@ import com.elchinasgarov.codinghub.databinding.TopicItemListBinding
 
 class TopicAdapter : ListAdapter<TopicModel, TopicViewHolder>(MainDiffUtils) {
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopicViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = TopicItemListBinding.inflate(inflater, parent, false)
