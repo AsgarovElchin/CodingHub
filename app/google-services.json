@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "398196187572",
+    "project_id": "codinghubdatabase",
+    "storage_bucket": "codinghubdatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398196187572:android:42e1b650ce89f8c40dd2e1",
+        "android_client_info": {
+          "package_name": "com.elchinasgarov.codinghub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398196187572-1fd4vp3qk824gr2ru5pshjtcukb29jt9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elchinasgarov.codinghub",
+            "certificate_hash": "500657f56d1205cb03b90323fc4acd7392532a68"
+          }
+        },
+        {
+          "client_id": "398196187572-or96olqkr88e9m6f567uqrumuijuskdm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArFy8xeukKtM6sgvzylIhmxOyqCskiv4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398196187572-or96olqkr88e9m6f567uqrumuijuskdm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

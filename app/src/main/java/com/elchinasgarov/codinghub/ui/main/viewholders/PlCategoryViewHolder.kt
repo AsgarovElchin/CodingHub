@@ -1,9 +1,9 @@
-package com.elchinasgarov.codinghub.viewHolder
+package com.elchinasgarov.codinghub.ui.main.viewholders
 
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.elchinasgarov.codinghub.databinding.PlItemListBinding
-import com.elchinasgarov.codinghub.models.ProgrammingLanguagesModel
+import com.elchinasgarov.codinghub.ui.main.models.ProgrammingLanguagesModel
 
 class PlCategoryViewHolder(val binding: PlItemListBinding):RecyclerView.ViewHolder(binding.root) {
     fun bind(plModel : ProgrammingLanguagesModel){

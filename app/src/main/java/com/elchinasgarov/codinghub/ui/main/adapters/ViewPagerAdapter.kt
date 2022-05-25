@@ -1,11 +1,11 @@
-package com.elchinasgarov.codinghub.adapter
+package com.elchinasgarov.codinghub.ui.main.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.elchinasgarov.codinghub.databinding.ViewPagerItemBinding
-import com.elchinasgarov.codinghub.models.Data
-import com.elchinasgarov.codinghub.viewHolder.ViewPagerViewHolder
+import com.elchinasgarov.codinghub.ui.main.models.Data
+import com.elchinasgarov.codinghub.ui.main.viewholders.ViewPagerViewHolder
 
 class ViewPagerAdapter(val dataList : ArrayList<Data>):RecyclerView.Adapter<ViewPagerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPagerViewHolder {

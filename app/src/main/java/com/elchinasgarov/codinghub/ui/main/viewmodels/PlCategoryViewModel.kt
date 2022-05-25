@@ -1,9 +1,9 @@
-package com.elchinasgarov.codinghub.viewModels
+package com.elchinasgarov.codinghub.ui.main.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.elchinasgarov.codinghub.models.ProgrammingLanguagesModel
+import com.elchinasgarov.codinghub.ui.main.models.ProgrammingLanguagesModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 

@@ -6,7 +6,7 @@
     app:startDestination="@id/loginOrSignUpFragment">
     <fragment
         android:id="@+id/loginOrSignUpFragment"
-        android:name="com.elchinasgarov.codinghub.LoginOrSignUpFragment"
+        android:name="com.elchinasgarov.codinghub.ui.main.fragments.LoginOrSignUpFragment"
         android:label="fragment_login_or_sign_up"
         tools:layout="@layout/fragment_login_or_sign_up">
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.elchinasgarov.codinghub.LoginFragment"
+        android:name="com.elchinasgarov.codinghub.ui.main.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
-        android:name="com.elchinasgarov.codinghub.ResetPasswordFragment"
+        android:name="com.elchinasgarov.codinghub.ui.main.fragments.ResetPasswordFragment"
         android:label="fragment_reset_password"
         tools:layout="@layout/fragment_reset_password">
         <action
@@ -44,12 +44,12 @@
     </fragment>
     <fragment
         android:id="@+id/newPasswordFragment"
-        android:name="com.elchinasgarov.codinghub.NewPasswordFragment"
+        android:name="com.elchinasgarov.codinghub.ui.main.fragments.NewPasswordFragment"
         android:label="fragment_new_password"
         tools:layout="@layout/fragment_new_password" />
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.elchinasgarov.codinghub.SignUpFragment"
+        android:name="com.elchinasgarov.codinghub.ui.main.fragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up">
         <action
@@ -63,9 +63,9 @@
     </fragment>
     <fragment
         android:id="@+id/bottomNavigationFragment2"
-        android:name="com.elchinasgarov.codinghub.BottomNavigationFragment"
+        android:name="com.elchinasgarov.codinghub.ui.main.fragments.MainFragment"
         android:label="fragment_bottom_navigation"
-        tools:layout="@layout/fragment_bottom_navigation" >
+        tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_bottomNavigationFragment2_to_loginOrSignUpFragment"
             app:destination="@id/loginOrSignUpFragment"

@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_blue"
-    tools:context=".LoginOrSignUpFragment">
+    tools:context=".ui.main.fragments.LoginOrSignUpFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:id="@+id/viewPager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:elevation="10dp"
         app:cardCornerRadius="10dp"

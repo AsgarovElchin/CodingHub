@@ -1,4 +1,4 @@
-package com.elchinasgarov.codinghub
+package com.elchinasgarov.codinghub.ui.main.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,18 +7,21 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.elchinasgarov.codinghub.databinding.FragmentBottomNavigationBinding
+import com.elchinasgarov.codinghub.R
+
+import com.elchinasgarov.codinghub.databinding.FragmentMainBinding
 
 
-class BottomNavigationFragment : Fragment(R.layout.fragment_bottom_navigation) {
-    lateinit var binding: FragmentBottomNavigationBinding
+class MainFragment : Fragment(R.layout.fragment_main) {
+    lateinit var binding: FragmentMainBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentBottomNavigationBinding.inflate(inflater, container, false)
+        binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -27,6 +30,13 @@ class BottomNavigationFragment : Fragment(R.layout.fragment_bottom_navigation) {
         val navHost = childFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
         binding.bnv.setupWithNavController(navHost.navController)
         binding.bnv.setOnItemReselectedListener(null)
+        val conf = AppBarConfiguration.Builder(
+            R.id.homeFragment,
+            R.id.leaderboardFragment,
+            R.id.settingsFragment
+        ).build()
+
+        binding.mainToolbar.setupWithNavController(navHost.navController,conf)
     }
 
 

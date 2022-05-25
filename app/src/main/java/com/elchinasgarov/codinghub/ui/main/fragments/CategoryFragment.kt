@@ -1,4 +1,4 @@
-package com.elchinasgarov.codinghub
+package com.elchinasgarov.codinghub.ui.main.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,21 +7,22 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import com.elchinasgarov.codinghub.adapter.PlCategoryAdapter
-import com.elchinasgarov.codinghub.databinding.FragmentHomeBinding
-import com.elchinasgarov.codinghub.viewModels.PlCategoryViewModel
+import com.elchinasgarov.codinghub.R
+import com.elchinasgarov.codinghub.ui.main.adapters.PlCategoryAdapter
+import com.elchinasgarov.codinghub.databinding.FragmentCategoryBinding
+import com.elchinasgarov.codinghub.ui.main.viewmodels.PlCategoryViewModel
 
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class CategoryFragment : Fragment(R.layout.fragment_category) {
     private val plCategoryAdapter = PlCategoryAdapter()
     private val viewModel: PlCategoryViewModel by viewModels()
-    lateinit var binding: FragmentHomeBinding
+    lateinit var binding: FragmentCategoryBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentCategoryBinding.inflate(inflater, container, false)
         return binding.root
     }
 

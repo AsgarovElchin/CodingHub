@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_blue"
-    tools:context=".LoginFragment">
+    tools:context=".ui.main.fragments.LoginFragment">
 
     <TextView
         android:id="@+id/login_tv"
@@ -20,57 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_with_google_btn"
-        style="@style/login_with_smth"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:textAllCaps="false"
-        app:icon="@drawable/google_icon"
-        app:iconTint="@null"
-        android:paddingEnd="30dp"
-        app:iconGravity="textStart"
-        app:iconPadding="15dp"
-        android:paddingVertical="12dp"
-        android:text="@string/login_with_google"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_tv" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_with_facebook_btn"
-        style="@style/login_with_smth"
-        android:layout_width="0dp"
-        app:iconPadding="15dp"
-        app:iconTint="@null"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:textAllCaps="false"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        app:icon="@drawable/facebook_icon"
-        app:iconGravity="textStart"
-        android:paddingVertical="12dp"
-        android:text="@string/login_with_facebook"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_with_google_btn" />
-
-    <TextView
-        android:id="@+id/or"
-        style="@style/or"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/or"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_with_facebook_btn" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_adress_layout"
@@ -78,11 +28,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/or">
+        app:layout_constraintTop_toBottomOf="@id/login_tv">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginEmail"
@@ -101,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         app:passwordToggleEnabled="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:passwordToggleTint="@color/primary_blue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +74,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:paddingVertical="12dp"
         android:text="@string/login"
@@ -139,7 +89,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:text="@string/forgot_password"
         app:layout_constraintEnd_toEndOf="parent"
@@ -151,7 +101,7 @@
         style="@style/by_continuing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="3dp"
         android:text="@string/by_continuing"
         app:layout_constraintBottom_toBottomOf="@id/terms_and_conditions_tv"

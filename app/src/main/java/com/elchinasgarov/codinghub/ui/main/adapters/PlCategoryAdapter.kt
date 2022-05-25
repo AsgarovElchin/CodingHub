@@ -1,12 +1,12 @@
-package com.elchinasgarov.codinghub.adapter
+package com.elchinasgarov.codinghub.ui.main.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.elchinasgarov.codinghub.databinding.PlItemListBinding
-import com.elchinasgarov.codinghub.models.ProgrammingLanguagesModel
-import com.elchinasgarov.codinghub.viewHolder.PlCategoryViewHolder
+import com.elchinasgarov.codinghub.ui.main.models.ProgrammingLanguagesModel
+import com.elchinasgarov.codinghub.ui.main.viewholders.PlCategoryViewHolder
 
 class PlCategoryAdapter() :
     ListAdapter<ProgrammingLanguagesModel, PlCategoryViewHolder>(MainDiffUtils) {

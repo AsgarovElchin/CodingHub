@@ -1,4 +1,4 @@
-package com.elchinasgarov.codinghub
+package com.elchinasgarov.codinghub.ui.main.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.elchinasgarov.codinghub.adapter.ViewPagerAdapter
+import com.elchinasgarov.codinghub.R
+import com.elchinasgarov.codinghub.ui.main.adapters.ViewPagerAdapter
 import com.elchinasgarov.codinghub.databinding.FragmentLoginOrSignUpBinding
-import com.elchinasgarov.codinghub.models.Data
+import com.elchinasgarov.codinghub.ui.main.models.Data
 
 
 class LoginOrSignUpFragment : Fragment(R.layout.fragment_login_or_sign_up) {

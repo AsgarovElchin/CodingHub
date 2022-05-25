@@ -1,10 +1,11 @@
-package com.elchinasgarov.codinghub
+package com.elchinasgarov.codinghub.ui.main.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.elchinasgarov.codinghub.R
 import com.elchinasgarov.codinghub.databinding.FragmentEditProfileBinding
 
 

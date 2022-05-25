@@ -1,4 +1,4 @@
-package com.elchinasgarov.codinghub.models
+package com.elchinasgarov.codinghub.ui.main.models
 
 data class ProgrammingLanguagesModel(
     var id: String = "",

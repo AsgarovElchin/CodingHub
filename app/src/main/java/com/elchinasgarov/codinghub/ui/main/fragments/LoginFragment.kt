@@ -1,54 +1,63 @@
-package com.elchinasgarov.codinghub
+package com.elchinasgarov.codinghub.ui.main.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.elchinasgarov.codinghub.databinding.FragmentSignUpBinding
+import com.elchinasgarov.codinghub.R
+import com.elchinasgarov.codinghub.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
+class LoginFragment : Fragment(R.layout.fragment_login) {
     lateinit var auth: FirebaseAuth
-    private lateinit var binding: FragmentSignUpBinding
+    private lateinit var binding: FragmentLoginBinding
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSignUpBinding.inflate(inflater, container, false)
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.loginTv.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
-        }
         auth = FirebaseAuth.getInstance()
-        binding.signUpButton.setOnClickListener {
-            singUpUser()
+
+        binding.forgotPasswordTv.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_resetPasswordFragment)
+        }
+        binding.loginBtn.setOnClickListener {
+            logInUser()
         }
 
 
     }
+    
 
-    private fun singUpUser() {
-        val email = binding.editTextEmail.text.toString()
-        val password = binding.editTextPassword.text.toString()
+    private fun logInUser() {
+        val email = binding.loginEmail.text.toString()
+        val password = binding.loginPassword.text.toString()
         if (email.equals("") || password.equals("")) {
             Toast.makeText(requireContext(), "Enter email and password !", Toast.LENGTH_SHORT)
                 .show()
         } else {
             CoroutineScope(Dispatchers.IO).launch {
-                auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
-                    findNavController().navigate(R.id.action_signUpFragment_to_bottomNavigationFragment2)
+                auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
+
+                    Log.d("tag",   "${it.additionalUserInfo?.profile?.keys}")
+                    findNavController().navigate(R.id.action_loginFragment_to_bottomNavigationFragment2)
+
 
                 }.addOnFailureListener {
                     Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_SHORT).show()
@@ -56,10 +65,4 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
             }
         }
     }
-
-
 }
-
-
-
-
