@@ -38,15 +38,12 @@
         android:name="com.elchinasgarov.codinghub.ui.main.fragments.ResetPasswordFragment"
         android:label="fragment_reset_password"
         tools:layout="@layout/fragment_reset_password">
+
         <action
-            android:id="@+id/action_resetPasswordFragment_to_newPasswordFragment"
-            app:destination="@id/newPasswordFragment" />
+            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/newPasswordFragment"
-        android:name="com.elchinasgarov.codinghub.ui.main.fragments.NewPasswordFragment"
-        android:label="fragment_new_password"
-        tools:layout="@layout/fragment_new_password" />
+
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.elchinasgarov.codinghub.ui.main.fragments.SignUpFragment"

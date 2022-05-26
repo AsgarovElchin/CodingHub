@@ -38,5 +38,14 @@
         android:id="@+id/topicFragment"
         android:name="com.elchinasgarov.codinghub.ui.main.fragments.TopicFragment"
         android:label="Topics"
-        tools:layout="@layout/fragment_topic" />
+        tools:layout="@layout/fragment_topic" >
+        <action
+            android:id="@+id/action_topicFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.elchinasgarov.QuestionFragment"
+        android:label="Questions"
+        tools:layout="@layout/fragment_question" />
 </navigation>
