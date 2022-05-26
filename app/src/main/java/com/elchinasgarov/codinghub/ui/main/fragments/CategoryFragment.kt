@@ -44,7 +44,7 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
             bundleOf(
                 "id" to it.id
             ))
-            Log.d("Tag","$it.id")
+
 
         }
 

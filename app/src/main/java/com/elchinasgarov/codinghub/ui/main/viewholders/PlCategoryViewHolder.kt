@@ -2,7 +2,6 @@ package com.elchinasgarov.codinghub.ui.main.viewholders
 
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.elchinasgarov.TopicModel
 import com.elchinasgarov.codinghub.databinding.PlItemListBinding
 import com.elchinasgarov.codinghub.ui.main.models.ProgrammingLanguagesModel
 

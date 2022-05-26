@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.elchinasgarov.TopicModel
 import com.elchinasgarov.codinghub.databinding.PlItemListBinding
 import com.elchinasgarov.codinghub.ui.main.models.ProgrammingLanguagesModel
 import com.elchinasgarov.codinghub.ui.main.viewholders.PlCategoryViewHolder

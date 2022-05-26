@@ -1,11 +1,9 @@
-package com.elchinasgarov.codinghub
+package com.elchinasgarov.codinghub.ui.main.viewmodels
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.elchinasgarov.TopicModel
-import com.elchinasgarov.codinghub.ui.main.models.ProgrammingLanguagesModel
+import com.elchinasgarov.codinghub.ui.main.models.TopicModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -17,7 +15,7 @@ class TopicViewModel : ViewModel() {
 
 
     fun getTopicData(documentId:String){
-        firestore.collection("PlCategory").document(documentId).collection("topics").get().addOnSuccessListener {
+        firestore.collection("PlCategory").document(documentId).collection("Sets").get().addOnSuccessListener {
             val documents = it.documents
             val topicList = documents.mapNotNull { doc ->
                 val topicModell = doc.toObject(TopicModel::class.java)
@@ -26,7 +24,7 @@ class TopicViewModel : ViewModel() {
 
             }
             _topicData.value = topicList
-            Log.d("Tag","$topicList")
+
         }
     }
 

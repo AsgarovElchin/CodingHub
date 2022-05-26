@@ -1,9 +1,10 @@
-package com.elchinasgarov.codinghub
+package com.elchinasgarov.codinghub.ui.main.fragments
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
+import com.elchinasgarov.codinghub.R
 import com.google.firebase.auth.FirebaseAuth
 
 

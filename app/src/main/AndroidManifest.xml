@@ -11,7 +11,7 @@
         android:theme="@style/Theme.CodingHub">
         <activity
             android:theme="@style/SplashScreen"
-            android:name=".MainActivity"
+            android:name=".ui.main.fragments.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

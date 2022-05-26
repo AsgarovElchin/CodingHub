@@ -1,10 +1,12 @@
-package com.elchinasgarov
+package com.elchinasgarov.codinghub.ui.main.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.elchinasgarov.codinghub.databinding.TopicItemListBinding
+import com.elchinasgarov.codinghub.ui.main.models.TopicModel
+import com.elchinasgarov.codinghub.ui.main.viewholders.TopicViewHolder
 
 class TopicAdapter : ListAdapter<TopicModel, TopicViewHolder>(MainDiffUtils) {
 
