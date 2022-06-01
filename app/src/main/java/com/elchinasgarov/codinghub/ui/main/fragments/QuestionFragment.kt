@@ -1,4 +1,4 @@
-package com.elchinasgarov
+package com.elchinasgarov.codinghub.ui.main.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.elchinasgarov.codinghub.ui.main.viewmodels.QuestionViewModel
 import com.elchinasgarov.codinghub.R
 import com.elchinasgarov.codinghub.databinding.FragmentQuestionBinding
+import com.elchinasgarov.codinghub.ui.main.adapters.QuestionAdapter
 
 
 class QuestionFragment : Fragment(R.layout.fragment_question) {
@@ -34,16 +36,22 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
         }
         Log.d("Tag","$documentId and $documentId2")
 
-        questionViewModel.questionData.observe(viewLifecycleOwner) { qList ->
-            qList?.let { questionList ->
-                questionAdapter.submitList(questionList.toMutableList())
+        questionViewModel.questionData.observe(viewLifecycleOwner) { question ->
+            question?.answers?.let { answersList ->
+                questionAdapter.submitList(answersList.toMutableList())
             }
+            binding.questionTextView.text = question.question
+            Log.d("Taggggg","type : ${question}")
+
 
         }
 
         binding.questionRV.adapter = questionAdapter
         binding.questionRV.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        questionAdapter.setOnItemClick {
+            questionViewModel.onAnswerSelect(it)
+        }
 
 
     }

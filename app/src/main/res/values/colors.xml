@@ -11,5 +11,7 @@
     <color name="light_blue">#FFFFFF</color>
     <color name="baby_blue">#0CDCF6</color>
     <color name="primary_blue">#6A5AE0</color>
+    <color name="green">#1FC828</color>
+    <color name="red">#CF2727</color>
 
 </resources>
