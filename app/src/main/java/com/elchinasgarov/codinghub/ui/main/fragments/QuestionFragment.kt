@@ -8,10 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.elchinasgarov.codinghub.ui.main.viewmodels.QuestionViewModel
 import com.elchinasgarov.codinghub.R
 import com.elchinasgarov.codinghub.databinding.FragmentQuestionBinding
 import com.elchinasgarov.codinghub.ui.main.adapters.QuestionAdapter
+import com.elchinasgarov.codinghub.ui.main.models.NextButtonState
+import com.elchinasgarov.codinghub.ui.main.viewmodels.QuestionViewModel
 
 
 class QuestionFragment : Fragment(R.layout.fragment_question) {
@@ -34,16 +35,19 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
         if (documentId != null && documentId2 != null) {
             questionViewModel.getQuestionData(documentId, documentId2)
         }
-        Log.d("Tag","$documentId and $documentId2")
+        Log.d("Tag", "$documentId and $documentId2")
 
         questionViewModel.questionData.observe(viewLifecycleOwner) { question ->
             question?.answers?.let { answersList ->
                 questionAdapter.submitList(answersList.toMutableList())
             }
             binding.questionTextView.text = question.question
-            Log.d("Taggggg","type : ${question}")
+            Log.d("Taggggg", "type : ${question}")
 
 
+        }
+        questionViewModel.nextButtonState.observe(viewLifecycleOwner) { state ->
+            onButtonStateChanged(state)
         }
 
         binding.questionRV.adapter = questionAdapter
@@ -54,6 +58,22 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
         }
 
 
+        binding.nextQuestionBtn.setOnClickListener {
+            questionViewModel.getNextQuestion()
+        }
+
+
+    }
+
+    fun onButtonStateChanged(state: NextButtonState) {
+        when (state) {
+            NextButtonState.ACTIVE -> binding.nextQuestionBtn.isEnabled = true
+            NextButtonState.DEACTIVE -> binding.nextQuestionBtn.isEnabled = false
+            NextButtonState.END -> {
+                binding.nextQuestionBtn.isEnabled = true
+                binding.nextQuestionBtn.text = "Save"
+            }
+        }
     }
 
 }

@@ -1,19 +1,18 @@
 package com.elchinasgarov.codinghub.ui.main.adapters
 
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.elchinasgarov.AnswersUIModel
-import com.elchinasgarov.codinghub.ui.main.viewholders.QuestionViewHolder
 import com.elchinasgarov.codinghub.databinding.AnswersListItemBinding
+import com.elchinasgarov.codinghub.ui.main.viewholders.QuestionViewHolder
 
-class QuestionAdapter : ListAdapter<AnswersUIModel, QuestionViewHolder>(MainDiffUtils) {
-    private var onItemClick: ((position : Int) -> Unit)? = null
+class QuestionAdapter : RecyclerView.Adapter<QuestionViewHolder>() {
+    private var onItemClick: ((position: Int) -> Unit)? = null
+    private val dataList = mutableListOf<AnswersUIModel>()
 
-    fun setOnItemClick(onItemClick: ((position : Int) -> Unit)?){
+    fun setOnItemClick(onItemClick: ((position: Int) -> Unit)?) {
         this.onItemClick = onItemClick
 
     }
@@ -26,34 +25,20 @@ class QuestionAdapter : ListAdapter<AnswersUIModel, QuestionViewHolder>(MainDiff
     }
 
     override fun onBindViewHolder(holder: QuestionViewHolder, position: Int) {
-        holder.bind(currentList[position],onItemClick)
+        holder.bind(dataList[position], onItemClick)
     }
 
 
-    override fun submitList(list: MutableList<AnswersUIModel>?) {
-        val newList = mutableListOf<AnswersUIModel>()
-        newList.addAll(list ?: mutableListOf())
-        Log.d("Yuuuuuuu","type : ${list.toString()}")
-        super.submitList(newList)
+    fun submitList(list: MutableList<AnswersUIModel>?) {
+        dataList.clear()
+        list?.let { dataList.addAll(it) }
+        notifyDataSetChanged()
+
 
     }
-    object MainDiffUtils : DiffUtil.ItemCallback<AnswersUIModel>() {
 
-        override fun areItemsTheSame(
-            oldItem: AnswersUIModel,
-            newItem: AnswersUIModel
-        ): Boolean {
-            return oldItem == newItem
-        }
 
-        override fun areContentsTheSame(
-            oldItem: AnswersUIModel,
-            newItem: AnswersUIModel
-        ): Boolean {
-            return oldItem.id == newItem.id ||
-                    oldItem.answer == newItem.answer ||
-                    oldItem.type == newItem.type
-        }
-
+    override fun getItemCount(): Int {
+        return dataList.size
     }
 }

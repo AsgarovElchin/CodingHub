@@ -55,6 +55,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             CoroutineScope(Dispatchers.IO).launch {
                 auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
 
+
+
                     Log.d("tag",   "${it.additionalUserInfo?.profile?.keys}")
                     findNavController().navigate(R.id.action_loginFragment_to_bottomNavigationFragment2)
 
