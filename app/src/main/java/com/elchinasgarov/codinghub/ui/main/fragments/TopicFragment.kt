@@ -44,7 +44,7 @@ class TopicFragment : Fragment(R.layout.fragment_topic) {
         }
 
         topicAdapter.setOnItemClick {
-            findNavController().navigate(R.id.action_topicFragment_to_questionFragment,
+          findNavController()?.navigate(R.id.action_topicFragment_to_questionFragment,
             bundleOf("documentId2" to it.id ,
             "documentId" to documentId))
         }

@@ -32,8 +32,9 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
                 ?.navigate(R.id.action_bottomNavigationFragment2_to_loginOrSignUpFragment)
         }
         binding.linear1.setOnClickListener {
-            findNavController().navigate(R.id.action_settingsFragment_to_editProfileFragment)
+            parentFragment?.parentFragment?.findNavController()?.navigate(R.id.editProfileFragment)
         }
+
 
 
 

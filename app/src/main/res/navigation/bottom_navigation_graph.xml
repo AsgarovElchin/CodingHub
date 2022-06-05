@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_category" >
         <action
             android:id="@+id/action_categoryFragment_to_topicFragment"
-            app:destination="@id/topicFragment" />
+             />
     </fragment>
     <fragment
         android:id="@+id/leaderboardFragment"
@@ -25,27 +25,10 @@
         android:name="com.elchinasgarov.codinghub.ui.main.fragments.SettingsFragment"
         android:label="Settings"
         tools:layout="@layout/fragment_settings" >
+
         <action
-            android:id="@+id/action_settingsFragment_to_editProfileFragment"
-            app:destination="@id/editProfileFragment" />
+            android:id="@+id/action_settingsFragment_to_navigation_graph"
+            app:destination="@id/navigation_graph" />
     </fragment>
-    <fragment
-        android:id="@+id/editProfileFragment"
-        android:name="com.elchinasgarov.codinghub.ui.main.fragments.EditProfileFragment"
-        android:label="Profile"
-        tools:layout="@layout/fragment_edit_profile" />
-    <fragment
-        android:id="@+id/topicFragment"
-        android:name="com.elchinasgarov.codinghub.ui.main.fragments.TopicFragment"
-        android:label="Topics"
-        tools:layout="@layout/fragment_topic" >
-        <action
-            android:id="@+id/action_topicFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/questionFragment"
-        android:name="com.elchinasgarov.codinghub.ui.main.fragments.QuestionFragment"
-        android:label="Questions"
-        tools:layout="@layout/fragment_question" />
+    <include app:graph="@navigation/navigation_graph" />
 </navigation>

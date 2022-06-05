@@ -40,7 +40,7 @@ class CategoryFragment : Fragment(R.layout.fragment_category) {
         binding.RvPlCategory.adapter = plCategoryAdapter
         binding.RvPlCategory.layoutManager = GridLayoutManager(context, 2)
         plCategoryAdapter.setOnItemClick {
-            findNavController().navigate(R.id.action_categoryFragment_to_topicFragment,
+            parentFragment?.parentFragment?.findNavController()?.navigate(R.id.topicFragment,
             bundleOf(
                 "id" to it.id
             ))

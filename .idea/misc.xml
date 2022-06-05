@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub/app/src/main/res/layout/answers_list_item.xml" value="0.25" />
+        <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub/app/src/main/res/layout/fragment_main.xml" value="0.25" />
+        <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub/app/src/main/res/layout/fragment_question.xml" value="0.25" />
+        <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub/app/src/main/res/layout/pl_item_list.xml" value="0.25" />
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.149" />
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/drawable/email_icon.xml" value="0.138" />
         <entry key="..\:/Users/FX706HCB/AndroidStudioProjects/CodingHub6/app/src/main/res/drawable/home_icon.xml" value="0.149" />
