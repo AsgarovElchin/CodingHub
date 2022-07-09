@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.elchinasgarov.codinghub.ui.main.models.LeaderBoardModel
+import com.elchinasgarov.codinghub.utils.Constants
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.launch
@@ -16,7 +17,7 @@ class LeaderBoardViewModel() : ViewModel() {
 
     fun getLeaderBoardData() {
         viewModelScope.launch {
-            firestore.collection("Results").get().addOnSuccessListener {
+            firestore.collection(Constants.RESULTS).get().addOnSuccessListener {
                 val documents = it.documents
                 val leaderBoardList = documents.mapNotNull { doc ->
                     val leaderBoardM = doc.toObject(LeaderBoardModel::class.java)

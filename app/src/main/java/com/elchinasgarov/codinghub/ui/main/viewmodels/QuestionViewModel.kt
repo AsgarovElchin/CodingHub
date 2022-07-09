@@ -11,6 +11,7 @@ import com.elchinasgarov.codinghub.ui.main.models.AnswerResult
 import com.elchinasgarov.codinghub.ui.main.models.AnswerUIType
 import com.elchinasgarov.codinghub.ui.main.models.LeaderBoardModel
 import com.elchinasgarov.codinghub.ui.main.models.NextButtonState
+import com.elchinasgarov.codinghub.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -57,8 +58,8 @@ class QuestionViewModel : ViewModel() {
     fun getQuestionData(documentId: String, documentId2: String) {
         languageId = documentId
         topicId = documentId2
-        firestore.collection("PlCategory").document(documentId).collection("Sets")
-            .document(documentId2).collection("Questions").get().addOnSuccessListener {
+        firestore.collection(Constants.CATEGORY_COLLECTION_NAME).document(documentId).collection("Sets")
+            .document(documentId2).collection(Constants.QUESTIONS).get().addOnSuccessListener {
                 val documents = it.documents
                 val questions = documents.mapNotNull { doc ->
                     val questionModell = doc.toObject(QuestionModel::class.java)
@@ -137,7 +138,7 @@ class QuestionViewModel : ViewModel() {
         var userOldResults: LeaderBoardModel? = null
         coroutineScope {
             val result = async {
-                Firebase.firestore.collection("Results").document(email).get()
+                Firebase.firestore.collection(Constants.RESULTS).document(email).get()
             }
             Log.d("result", "result:$result")
             userOldResults = result.await().result.toObject(LeaderBoardModel::class.java)

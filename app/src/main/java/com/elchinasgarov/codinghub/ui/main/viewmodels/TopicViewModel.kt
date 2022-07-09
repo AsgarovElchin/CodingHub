@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.elchinasgarov.codinghub.ui.main.models.TopicModel
+import com.elchinasgarov.codinghub.utils.Constants
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -15,7 +16,7 @@ class TopicViewModel : ViewModel() {
 
 
     fun getTopicData(documentId:String){
-        firestore.collection("PlCategory").document(documentId).collection("Sets").get().addOnSuccessListener {
+        firestore.collection(Constants.CATEGORY_COLLECTION_NAME).document(documentId).collection(Constants.SETS).get().addOnSuccessListener {
             val documents = it.documents
             val topicList = documents.mapNotNull { doc ->
                 val topicModell = doc.toObject(TopicModel::class.java)

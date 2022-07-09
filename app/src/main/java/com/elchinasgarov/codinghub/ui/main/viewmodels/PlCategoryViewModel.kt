@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.elchinasgarov.codinghub.ui.main.models.ProgrammingLanguagesModel
+import com.elchinasgarov.codinghub.utils.Constants
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -15,7 +16,7 @@ class PlCategoryViewModel : ViewModel() {
 
 
     fun getPlDataFromFirebase() {
-        firestore.collection(CATEGORY_COLLECTION_NAME).get().addOnSuccessListener {
+        firestore.collection(Constants.CATEGORY_COLLECTION_NAME).get().addOnSuccessListener {
             val documents = it.documents
             val plList = documents.mapNotNull { doc ->
                 val plModell = doc.toObject(ProgrammingLanguagesModel::class.java)
@@ -30,8 +31,5 @@ class PlCategoryViewModel : ViewModel() {
 
     }
 
-    companion object {
-        const val CATEGORY_COLLECTION_NAME = "PlCategory"
-    }
 
 }

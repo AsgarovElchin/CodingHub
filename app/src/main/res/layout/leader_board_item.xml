@@ -7,39 +7,53 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="8dp">
 
         <ImageView
             android:id="@+id/avatarImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:src="@drawable/avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/fullName"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/pointsTitle"
             app:layout_constraintStart_toEndOf="@id/avatarImage"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="slllllllllllllllllllllll" />
+            tools:text="Elchin Asgarov" />
+
+        <TextView
+            android:id="@+id/pointsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="Points:"
+            android:textColor="@color/primary_blue"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/point"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="30"
             android:textColor="@color/black"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/fullName"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="@id/pointsTitle"
+            app:layout_constraintStart_toStartOf="@id/pointsTitle"
+            app:layout_constraintTop_toBottomOf="@id/pointsTitle" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
