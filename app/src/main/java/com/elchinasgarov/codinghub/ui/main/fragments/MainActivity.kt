@@ -1,10 +1,12 @@
 package com.elchinasgarov.codinghub.ui.main.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
 import com.elchinasgarov.codinghub.R
+import com.elchinasgarov.codinghub.utils.UserInformation
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -22,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         val graph = inflater.inflate(R.navigation.navigation_graph)
 
         if (auth.currentUser != null) {
+            UserInformation.getUserInfo(auth.currentUser?.email)
+            Log.d("kkk","${auth.currentUser?.email}")
             graph.setStartDestination(R.id.mainFragment)
         } else {
             graph.setStartDestination(R.id.loginOrSignUpFragment)
