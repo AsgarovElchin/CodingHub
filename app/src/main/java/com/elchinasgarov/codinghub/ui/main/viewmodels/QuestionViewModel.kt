@@ -15,9 +15,8 @@ import com.elchinasgarov.codinghub.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.async
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 
 class QuestionViewModel : ViewModel() {
     var currentPage = 0
@@ -58,7 +57,8 @@ class QuestionViewModel : ViewModel() {
     fun getQuestionData(documentId: String, documentId2: String) {
         languageId = documentId
         topicId = documentId2
-        firestore.collection(Constants.CATEGORY_COLLECTION_NAME).document(documentId).collection("Sets")
+        firestore.collection(Constants.CATEGORY_COLLECTION_NAME).document(documentId)
+            .collection("Sets")
             .document(documentId2).collection(Constants.QUESTIONS).get().addOnSuccessListener {
                 val documents = it.documents
                 val questions = documents.mapNotNull { doc ->
@@ -105,18 +105,15 @@ class QuestionViewModel : ViewModel() {
     private fun sendResults() {
         var finalPoint = userPoint
         val email = FirebaseAuth.getInstance().currentUser?.email
-        var userOldResults: LeaderBoardModel? = null
-        Log.d("email", "$email")
         email?.let {
             viewModelScope.launch {
-                Log.d("uuu", "$it")
-                try {
-                    userOldResults = getUserOldResult(it)
-                } catch (e: Exception) {
-                    Log.d("userResultFail", "${e.localizedMessage}")
-                }
-
-                userOldResults?.points?.let {
+                val oldResultDocument =
+                    Firebase.firestore.collection(Constants.RESULTS).document(email)
+                // gradle-de dependency elave elemisem coroutine-ler firebase tasklar ile islemek ucun.
+                // onun hesabina await vermek olur ki gozlesin kod cavabi
+                val oldDocument =
+                    oldResultDocument.get().await().toObject(LeaderBoardModel::class.java)
+                oldDocument?.points?.let {
                     finalPoint += it
                 }
                 val leaderBoardModel = LeaderBoardModel(
@@ -124,30 +121,14 @@ class QuestionViewModel : ViewModel() {
                     fullName = email,
                     points = finalPoint
                 )
-                Log.d("leader", "$leaderBoardModel")
-                Firebase.firestore.collection("Results").document(email).set(leaderBoardModel)
+                Firebase.firestore.collection(Constants.RESULTS).document(email)
+                    .set(leaderBoardModel)
 
             }
-
         }
-
-
-    }
-
-    private suspend fun getUserOldResult(email: String): LeaderBoardModel? {
-        var userOldResults: LeaderBoardModel? = null
-        coroutineScope {
-            val result = async {
-                Firebase.firestore.collection(Constants.RESULTS).document(email).get()
-            }
-            Log.d("result", "result:$result")
-            userOldResults = result.await().result.toObject(LeaderBoardModel::class.java)
-            Log.d("result", "userOldResult:$userOldResults")
-
-        }
-
-        return userOldResults
     }
 
 
 }
+
+
